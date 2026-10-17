@@ -1,0 +1,10 @@
+{
+  "name": "pip-midnight-observatory-source",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix pip-observatory run dev",
+    "build": "npm --prefix pip-observatory run build",
+    "build:single": "npm --prefix pip-observatory run build:single",
+    "preview": "npm --prefix pip-observatory run preview"
+  }
+}
