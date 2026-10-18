@@ -41,7 +41,7 @@ export function CharacterIntroduction() {
         </figure>
 
         <div className="sheet reveal">
-          <p className="eyebrow">Character sheet · Badge No. 0001</p>
+          <p className="eyebrow">Character sheet</p>
           <h2 id="meet-title" className="section-title">
             Meet Pip
           </h2>
