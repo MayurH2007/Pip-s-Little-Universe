@@ -50,6 +50,13 @@ export function DreamPlayground() {
 
   const c = view >= 0 ? CONSTELLATIONS[view] : null;
 
+  const reset = () => {
+  setStars(0);
+  setSpin(0);
+  setView(-1);
+  setMessage("The observatory is quiet. Try the big star, or peek through the telescope.");
+};
+
   return (
     <section className="section playground" id="playground" aria-labelledby="playground-title">
       <div className="wrap">
@@ -99,8 +106,12 @@ export function DreamPlayground() {
           </div>
 
           <p className="toy__message" role="status">
-            {message}
+              {message}
           </p>
+
+          <button type="button" className="btn btn--night" onClick={reset}>
+            Reset
+          </button>
         </div>
       </div>
     </section>
