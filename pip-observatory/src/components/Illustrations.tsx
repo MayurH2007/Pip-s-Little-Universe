@@ -1,36 +1,53 @@
 /* Drawn fallbacks shown only when an official haX.baby PNG is unavailable.
    They depict Pip's world (observatory, window, music box, lantern), never Pip. */
 
+// export function ObservatoryFallback() {
+//   return (
+//     <svg viewBox="0 0 400 400" className="art-fallback" role="img" aria-label="The Midnight Observatory floating on a cloud">
+//       <circle cx="300" cy="80" r="34" fill="var(--gold)" opacity=".25" />
+//       <path d="M318 52a32 32 0 1 0 0 56 26 26 0 0 1 0-56Z" fill="var(--gold)" />
+//       {/* cloud island */}
+//       <path
+//         d="M70 300c-26 0-40-18-34-36 6-17 26-22 40-15 6-26 34-40 60-30 14-20 46-24 66-8 20-14 54-8 64 18 28-4 50 16 46 40-4 22-24 32-46 32Z"
+//         fill="var(--cloud)"
+//       />
+//       <path d="M86 296c30 10 64 10 96 0m40 4c30 8 64 6 90-4" stroke="var(--lavender)" strokeWidth="4" strokeLinecap="round" fill="none" />
+//       {/* tower */}
+//       <rect x="152" y="176" width="96" height="92" rx="10" fill="var(--blush)" />
+//       <rect x="152" y="176" width="96" height="92" rx="10" fill="none" stroke="var(--cocoa)" strokeOpacity=".25" strokeWidth="3" />
+//       <path d="M186 268v-34a14 14 0 0 1 28 0v34Z" fill="var(--cocoa)" />
+//       <circle cx="173" cy="204" r="9" fill="var(--gold)" />
+//       <circle cx="227" cy="204" r="9" fill="var(--gold)" />
+//       {/* dome */}
+//       <path d="M140 180a60 60 0 0 1 120 0Z" fill="var(--berry)" />
+//       <path d="M195 122h10v58h-10Z" fill="var(--midnight)" opacity=".75" />
+//       <rect x="198" y="96" width="44" height="14" rx="7" transform="rotate(-28 198 110)" fill="var(--lavender)" />
+//       <rect x="236" y="74" width="12" height="18" rx="4" transform="rotate(-28 236 92)" fill="var(--gold)" />
+//       <path d="M140 180h120" stroke="var(--cocoa)" strokeOpacity=".3" strokeWidth="4" strokeLinecap="round" />
+//       {/* lanterns on string */}
+//       <path d="M70 150q60 30 82 26M248 170q50 0 84-30" stroke="var(--cream)" strokeOpacity=".6" strokeWidth="2" fill="none" />
+//       <circle cx="100" cy="164" r="7" fill="var(--gold)" />
+//       <circle cx="300" cy="156" r="7" fill="var(--blush)" />
+//       <circle cx="128" cy="172" r="5" fill="var(--lavender)" />
+//     </svg>
+//   );
+// }
+import pipCloudImage from '../assets/pip_avatar_cloud.png';
 export function ObservatoryFallback() {
   return (
-    <svg viewBox="0 0 400 400" className="art-fallback" role="img" aria-label="The Midnight Observatory floating on a cloud">
-      <circle cx="300" cy="80" r="34" fill="var(--gold)" opacity=".25" />
-      <path d="M318 52a32 32 0 1 0 0 56 26 26 0 0 1 0-56Z" fill="var(--gold)" />
-      {/* cloud island */}
-      <path
-        d="M70 300c-26 0-40-18-34-36 6-17 26-22 40-15 6-26 34-40 60-30 14-20 46-24 66-8 20-14 54-8 64 18 28-4 50 16 46 40-4 22-24 32-46 32Z"
-        fill="var(--cloud)"
-      />
-      <path d="M86 296c30 10 64 10 96 0m40 4c30 8 64 6 90-4" stroke="var(--lavender)" strokeWidth="4" strokeLinecap="round" fill="none" />
-      {/* tower */}
-      <rect x="152" y="176" width="96" height="92" rx="10" fill="var(--blush)" />
-      <rect x="152" y="176" width="96" height="92" rx="10" fill="none" stroke="var(--cocoa)" strokeOpacity=".25" strokeWidth="3" />
-      <path d="M186 268v-34a14 14 0 0 1 28 0v34Z" fill="var(--cocoa)" />
-      <circle cx="173" cy="204" r="9" fill="var(--gold)" />
-      <circle cx="227" cy="204" r="9" fill="var(--gold)" />
-      {/* dome */}
-      <path d="M140 180a60 60 0 0 1 120 0Z" fill="var(--berry)" />
-      <path d="M195 122h10v58h-10Z" fill="var(--midnight)" opacity=".75" />
-      <rect x="198" y="96" width="44" height="14" rx="7" transform="rotate(-28 198 110)" fill="var(--lavender)" />
-      <rect x="236" y="74" width="12" height="18" rx="4" transform="rotate(-28 236 92)" fill="var(--gold)" />
-      <path d="M140 180h120" stroke="var(--cocoa)" strokeOpacity=".3" strokeWidth="4" strokeLinecap="round" />
-      {/* lanterns on string */}
-      <path d="M70 150q60 30 82 26M248 170q50 0 84-30" stroke="var(--cream)" strokeOpacity=".6" strokeWidth="2" fill="none" />
-      <circle cx="100" cy="164" r="7" fill="var(--gold)" />
-      <circle cx="300" cy="156" r="7" fill="var(--blush)" />
-      <circle cx="128" cy="172" r="5" fill="var(--lavender)" />
-    </svg>
-  );
+    <img 
+      src={pipCloudImage} 
+      alt="Pip resting on a cloud" 
+      className="art-fallback" 
+style={{ 
+        width: '100%', 
+        maxWidth: '280px', 
+        height: 'auto', 
+        display: 'block', 
+        margin: '0 auto', 
+        objectFit: 'contain' 
+      }}
+    />  );
 }
 
 export function PortraitFallback() {

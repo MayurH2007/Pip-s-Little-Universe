@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown, Sparkles } from "lucide-react";
-import { OfficialArt } from "../lib/art";
+// import { OfficialArt } from "../lib/art";
 import { scrollToSection, prefersReducedMotion } from "../lib/motion";
 import { ObservatoryFallback, Village } from "./Illustrations";
 import { Puff, Twinkle } from "./Decor";
@@ -79,7 +79,7 @@ export function HeroSection() {
           </p>
           <div className="hero__actions">
             <button type="button" className="btn btn--primary" onClick={() => scrollToSection("creations")}>
-              Explore my little universe <ArrowDown size={18} aria-hidden="true" />
+              Explore my lbittle universe <ArrowDown size={18} aria-hidden="true" />
             </button>
             <button type="button" className="btn btn--ghost" onClick={() => scrollToSection("meet")}>
               Meet the dream engineer
@@ -90,15 +90,10 @@ export function HeroSection() {
           </p>
         </div>
 
-        <div className="hero__stage">
+       <div className="hero__stage">
           <div className="hero__halo" aria-hidden="true" />
           <div className="layer layer--near hero__pip float float--gentle">
-            <OfficialArt
-              name="cloud"
-              alt="Pip, a sleepy skull-faced baby in a starry nightcap, resting on a cloud"
-              className="hero__pip-img"
-              fallback={<ObservatoryFallback />}
-            />
+            <ObservatoryFallback />
           </div>
           <p className="hero__tag">
             “I build the dreams you fall asleep inside.”
